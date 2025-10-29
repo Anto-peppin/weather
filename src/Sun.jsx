@@ -17,7 +17,7 @@ const sunSet= new Date(
 });
     const date = new Date()
     const hour = date.getHours()
-    const rotateRadius = (hour/24)*100
+    const rotateRadius = (hour/12)*100
 
     
   return (
