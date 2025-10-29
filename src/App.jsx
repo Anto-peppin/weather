@@ -78,8 +78,8 @@ const App = () => {
           {/* search */}
 
           <div className="sm:hidden  p-4 pt-7 backdrop-blur-[5px] sticky top-0 z-20">
-            <div className="mb-3 text-2xl font-logo ">Anto Weather</div>
-            <div className="  border-2  rounded-xl flex  ">
+            <div className="mb-3 text-3xl font-logo ">Anto Weather</div>
+            <div className=" border-2  rounded-xl flex ">
               <input
                 value={input}
                 onChange={handleInput}
@@ -100,7 +100,7 @@ const App = () => {
 
           {/* middle */}
           <div className="p-2 py-4 flex flex-col justify-between grow">
-            <div className=" hidden sm:block mb-3 text-2xl font-logo ">
+            <div className=" hidden sm:block mb-3 text-3xl font-logo ">
               Anto Weather
             </div>
             <div
