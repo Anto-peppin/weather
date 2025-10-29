@@ -21,7 +21,7 @@ const sunSet= new Date(
 
     
   return (
-    <div className=' mt-4 backdrop-blur-xl bg-white/30 rounded'>
+    <div className=' py-2 mt-4 backdrop-blur-xl text-black bg-white/60 rounded'>
       <label className='flex items-center gap-1 ml-2 mt-2'><IoSunny /> Sun</label>
         <div className='relative h-[100px] mt-2 w-[220px] mx-auto overflow-hidden'>
           <div className='w-[200px] -rotate-18 top-0 absolute rounded-[50%] border-dashed h-[200px] left-2.5  border-2'>
@@ -34,7 +34,7 @@ const sunSet= new Date(
 
         </div>
         <hr className='border border-gray-400 '/>
-        <div className='w-[260px] flex justify-between mx-auto mt-1 '>
+        <div className='w-[260px] flex justify-between mx-auto mt-1  '>
             <span>
                 {sunRise}
             </span>

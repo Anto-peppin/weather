@@ -64,7 +64,7 @@ const App = () => {
   };
   if (fullData) {
     return (
-      <div className="relative w-full sm:h-screen">
+      <div className="relative w-full sm:h-screen ">
         {/* bg */}
         <div className="fixed inset-0 z-0 top-0 left-0">
           <img
@@ -104,14 +104,14 @@ const App = () => {
               Anto Weather
             </div>
             <div
-              className="flex w-[90%] sm:w-full p-2 relative left-[50%] sm:mt-0   bg-white/40 gap-2 items-center mt-[250px] backdrop-blur-3xl justify-center rounded-2xl md:self-end "
+              className="text-black flex w-[90%] sm:w-full p-2 relative left-[50%] sm:mt-0   bg-white/70 gap-2 items-center mt-[250px] backdrop-blur-3xl justify-center rounded-2xl md:self-end "
               style={{ transform: "translate(-50%)" }}
             >
-              <span className="text-5xl font-bold ">
+              <span className="text-5xl font-bold md:text-7xl ">
                 <h2>{Math.floor(fullData?.main?.temp - 273.5)}&deg;</h2>
               </span>
               <div className="text-center">
-                <p className="text-2xl ">{fullData?.name}</p>
+                <p className="text-2xl md:font-bold md:text-3xl ">{fullData?.name}</p>
                 <p className="text-l">{new Date().toDateString()}</p>
               </div>
               <div className="flex flex-col items-center ">
@@ -120,7 +120,7 @@ const App = () => {
                   src={`https://openweathermap.org/img/wn/${fullData?.weather[0]?.icon}@2x.png`}
                   alt=""
                 />
-                <p>{fullData?.weather[0]?.main}</p>
+                <p className="md:font-bold text-2xl">{fullData?.weather[0]?.main}</p>
               </div>
             </div>
           </div>
@@ -145,7 +145,7 @@ const App = () => {
               </button>
             </div>
 
-            <div className="w-full flex gap-3 sm:mt-10  flex-wrap justify-evenly">
+            <div className="text-black w-full flex gap-3 sm:mt-10  flex-wrap justify-evenly">
               <Datas
                 icon={<TbWorldLongitude />}
                 label={"Longitude"}
@@ -196,7 +196,7 @@ const App = () => {
               data={fullData}
             />
 
-            <div className="mt-5 w-full bg-white/30 p-3 rounded backdrop-blur-2xl flex flex-col gap-2 sm:mb-10">
+            <div className="mt-5 text-black w-full bg-white/70 p-3 rounded backdrop-blur-2xl flex flex-col gap-2 sm:mb-10">
               <label className="flex gap-1 items-center">
                 <FaWind /> Wind
               </label>
