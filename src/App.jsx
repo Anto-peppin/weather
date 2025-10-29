@@ -84,7 +84,7 @@ const App = () => {
                 value={input}
                 onChange={handleInput}
                 placeholder="Search the Place"
-                className="border-0 outline-0  p-1 grow  pl-2  "
+                className="border-0 outline-0  p-2 text- xl grow  pl-2  "
                 type="text"
               />
               <button
