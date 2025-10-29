@@ -11,10 +11,7 @@ const Wind = ({speed,deg,gust}) => {
         <p>Wind degree</p>
         <p>{deg}&deg;</p>
     </span>
-    <span className='flex justify-between'>
-        <p>Wind gust</p>
-        <p>{gust}m/s</p>
-    </span>
+
 
     </>
   )

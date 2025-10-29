@@ -203,7 +203,7 @@ const App = () => {
               <Wind
                 speed={fullData?.wind?.speed}
                 deg={fullData?.wind?.deg}
-                gust={fullData?.wind?.gust}
+                
               />
             </div>
           </div>
