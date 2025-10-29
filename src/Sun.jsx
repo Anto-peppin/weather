@@ -23,8 +23,8 @@ const sunSet= new Date(
   return (
     <div className=' py-2 mt-4 backdrop-blur-xl text-black bg-white/60 rounded'>
       <label className='flex items-center gap-1 ml-2 mt-2'><IoSunny /> Sun</label>
-        <div className='relative h-[100px] mt-2 w-[220px] mx-auto overflow-hidden'>
-          <div className='w-[200px] -rotate-18 top-0 absolute rounded-[50%] border-dashed h-[200px] left-2.5  border-2'>
+        <div className='relative  pt-10 h-[110px]  w-[220px] mx-auto overflow-hidden '>
+          <div className='w-[200px] -rotate-18 top-2 absolute rounded-[50%] border-dashed h-[200px] left-2.5  border-2'>
                <div className={`w-[200px]   absolute  rounded-[50%]  h-[200px] `} style={{transform:`rotate(${rotateRadius}deg) translate(-2px,-1px)`}} >
             <img className='absolute w-7  -left-3.5 top-[50%]' src="./sunlogo.webp" style={{transform:'translate(0,-50%)'}}/>
             <img className='absolute w-7  -right-3.5 top-[50%]' src="moon.png" style={{transform:'translate(0,-50%)'}}/>
