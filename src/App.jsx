@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { TbWorldLongitude } from "react-icons/tb";
 import Wind from "./Wind";
 import Sun from "./Sun";
@@ -18,9 +18,15 @@ const App = () => {
   const [fullData, setFullData] = useState();
   const [error, setError] = useState("");
 
+  const handleEnter = (e) => {
+    if (e.key == "Enter") {
+      handleSearch();
+    }
+  };
   const handleSearch = () => {
     setPlace(input);
   };
+
   const handleInput = (e) => {
     setInput(e.target.value);
   };
@@ -83,6 +89,7 @@ const App = () => {
               <input
                 value={input}
                 onChange={handleInput}
+                onKeyUp={handleEnter}
                 placeholder="Search the Place"
                 className="border-0 outline-0  p-2 text- xl grow  pl-2  "
                 type="text"
@@ -95,7 +102,7 @@ const App = () => {
                 Search
               </button>
             </div>
-            <p className="text-red-500 text-[13px] mt-2">*{error}</p>
+            <p className="text-red-500 text-[13px] mt-2">{error}</p>
           </div>
 
           {/* middle */}
@@ -111,7 +118,9 @@ const App = () => {
                 <h2>{Math.floor(fullData?.main?.temp - 273.5)}&deg;</h2>
               </span>
               <div className="text-center">
-                <p className="text-2xl md:font-bold md:text-3xl ">{fullData?.name}</p>
+                <p className="text-2xl md:font-bold md:text-3xl ">
+                  {fullData?.name}
+                </p>
                 <p className="text-l">{new Date().toDateString()}</p>
               </div>
               <div className="flex flex-col items-center ">
@@ -120,7 +129,9 @@ const App = () => {
                   src={`https://openweathermap.org/img/wn/${fullData?.weather[0]?.icon}@2x.png`}
                   alt=""
                 />
-                <p className="md:font-bold text-2xl">{fullData?.weather[0]?.main}</p>
+                <p className="md:font-bold text-2xl">
+                  {fullData?.weather[0]?.main}
+                </p>
               </div>
             </div>
           </div>
@@ -133,6 +144,7 @@ const App = () => {
                 placeholder="Search the Place"
                 onChange={handleInput}
                 value={input}
+                onKeyUp={handleEnter}
                 className="border-0 outline-0  p-1 grow  pl-2  "
                 type="text"
               />
@@ -143,10 +155,10 @@ const App = () => {
               >
                 Search
               </button>
-
             </div>
-            <p className="text-red-500 text-[13px] mt-2 hidden sm:block">*{error}</p>
-
+            <p className="text-red-500 text-[13px] mt-2 hidden sm:block">
+              {error}
+            </p>
 
             <div className="text-black w-full flex gap-3 sm:mt-10  flex-wrap justify-evenly">
               <Datas
@@ -203,11 +215,7 @@ const App = () => {
               <label className="flex gap-1 items-center">
                 <FaWind /> Wind
               </label>
-              <Wind
-                speed={fullData?.wind?.speed}
-                deg={fullData?.wind?.deg}
-                
-              />
+              <Wind speed={fullData?.wind?.speed} deg={fullData?.wind?.deg} />
             </div>
           </div>
         </div>

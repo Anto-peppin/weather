@@ -3,6 +3,7 @@ import { IoSunny } from "react-icons/io5";
 
 const Sun = ({rise,set,time,data}) => {
   const [hour,setHour] = useState(12)
+  const[curTime,setCurTime] = useState('--')
 const localOffset = new Date().getTimezoneOffset() * 60;
 const sunRise = new Date(
   (data?.sys?.country == 'IN' ? rise : rise + time - localOffset) * 1000
@@ -17,17 +18,22 @@ const sunSet= new Date(
   minute: '2-digit',
 });
 
- 
-
 
 useEffect(()=>{
     const now = new Date();
   const utcMs = now.getTime() + now.getTimezoneOffset() * 60000;
   const cityTime = new Date(utcMs + data.timezone * 1000);
   const finalHour = cityTime.getHours()
+
+  const normalHour = finalHour >12 ? finalHour-12 : finalHour
+  const finalMinits = cityTime.getMinutes()
+  const AmOrBm = finalHour>12 ? 'PM' : 'AM'
+  const finalTime = `${normalHour} : ${finalMinits} ${AmOrBm}`
+setCurTime(finalTime)
+  
      const rotateRadius = Math.round((finalHour/24)*100)
    setHour((rotateRadius/100)*360)
-},[])
+},[data])
 
 
 
@@ -46,8 +52,10 @@ useEffect(()=>{
         </div>         
         </div>
       
+            <div className='  absolute z-40 left-[34%] top-[40%]' >{curTime}</div>
 
         </div>
+        
         <hr className='border border-gray-400 '/>
         <div className='w-[260px] flex justify-between mx-auto mt-1  '>
             <span>
