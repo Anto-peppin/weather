@@ -95,7 +95,7 @@ const App = () => {
                 Search
               </button>
             </div>
-            <p className="text-red-500 text-[10px] mt-2">{error}</p>
+            <p className="text-red-500 text-[13px] mt-2">*{error}</p>
           </div>
 
           {/* middle */}
@@ -143,7 +143,10 @@ const App = () => {
               >
                 Search
               </button>
+
             </div>
+            <p className="text-red-500 text-[13px] mt-2 hidden sm:block">*{error}</p>
+
 
             <div className="text-black w-full flex gap-3 sm:mt-10  flex-wrap justify-evenly">
               <Datas
