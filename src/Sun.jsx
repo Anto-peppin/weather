@@ -25,11 +25,11 @@ useEffect(()=>{
   const utcMs = now.getTime() + now.getTimezoneOffset() * 60000;
   const cityTime = new Date(utcMs + data.timezone * 1000);
   const finalHour = cityTime.getHours()
-  setHour(finalHour)
+     const rotateRadius = Math.round((finalHour/24)*100)
+   setHour((rotateRadius/100)*360)
 },[])
 
-   const rotateRadius = Math.round((hour/24)*100)
-   const finalROund = (rotateRadius/100)*360
+
 
    
   
@@ -40,7 +40,7 @@ useEffect(()=>{
       <label className='flex items-center gap-1 ml-2 mt-2'><IoSunny /> Sun</label>
         <div className='relative  pt-10 h-[110px]  w-[220px] mx-auto overflow-hidden '>
           <div className='w-[200px] -rotate-86 top-2 absolute rounded-[50%] border-dashed h-[200px] left-2.5  border-2'>
-               <div className={`w-[200px]   absolute  rounded-[50%]  h-[200px] `} style={{transform:`rotate(${finalROund}deg) translate(-2px,-1px)`}} >
+               <div className={`w-[200px]   absolute  rounded-[50%]  h-[200px] `} style={{transform:`rotate(${hour}deg) translate(-2px,-1px)`}} >
             <img className='absolute w-7.5  -left-3 top-[50%]' src="./sunlogo.webp" style={{transform:'translate(0,-50%)'}}/>
             <img className='absolute w-7  -right-3.5 top-[50%]' src="moon.png" style={{transform:'translate(0,-50%)'}}/>
         </div>         
