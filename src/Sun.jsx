@@ -59,7 +59,7 @@ const Sun = ({ rise, set, time, data }) => {
           >
             <img
               className="absolute w-7.5  -left-3 top-[50%]"
-              src="./sunlogo.webp"
+              src="./sun1.png"
               style={{ transform: "translate(0,-50%)" }}
             />
             <img
@@ -86,7 +86,7 @@ const Sun = ({ rise, set, time, data }) => {
             </span>
             hour
           </div>
-          <div className="flex flex-col p-1 bg-neutral rounded-box text-neutral-content">
+          <div className="flex items-center flex-col p-1 bg-neutral rounded-box text-neutral-content">
             <span className="countdown font-mono text-lg ">
               <span
                 style={{ "--value": minites } /* as React.CSSProperties */}
@@ -98,7 +98,7 @@ const Sun = ({ rise, set, time, data }) => {
             </span>
            min
           </div>
-          <div className="flex flex-col p-1 bg-neutral rounded-box text-neutral-content">
+          <div className="flex items-center flex-col p-1 bg-neutral rounded-box text-neutral-content">
             <span className="countdown font-mono text-lg ">
               <span
                 style={{ "--value": sec } /* as React.CSSProperties */}
@@ -110,7 +110,7 @@ const Sun = ({ rise, set, time, data }) => {
             </span>
            sec
           </div>
-          <div className="flex flex-col justify-center p-1 bg-neutral rounded-box text-neutral-content">
+          <div className="flex items-center flex-col justify-center p-1 bg-neutral rounded-box text-neutral-content">
             <span className="countdown font-mono text-lg">
              {am}
             </span>
