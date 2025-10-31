@@ -106,12 +106,12 @@ const App = () => {
           </div>
 
           {/* middle */}
-          <div className="p-2 py-4 flex flex-col justify-between grow">
+          <div className="p-2  py-4 flex flex-col justify-between grow">
             <div className=" hidden sm:block mb-3 text-3xl font-logo ">
               Anto Weather
             </div>
             <div
-              className="text-black flex w-[90%] sm:w-full p-2 relative left-[50%] sm:mt-0   bg-white/70 gap-2 items-center mt-[250px] backdrop-blur-3xl justify-center rounded-2xl md:self-end "
+              className="text-black shadow-[inset_-2px_-2px_4px_black,inset_2px_2px_4px_white] flex w-[90%] sm:w-full p-2 relative left-[50%] sm:mt-0   bg-white/70 gap-2 items-center mt-[250px] backdrop-blur-3xl justify-center rounded-2xl md:self-end "
               style={{ transform: "translate(-50%)" }}
             >
               <span className="text-5xl font-bold md:text-7xl ">
@@ -160,7 +160,7 @@ const App = () => {
               {error}
             </p>
 
-            <div className="text-black w-full flex gap-3 sm:mt-10  flex-wrap justify-evenly">
+            <div className="text-black w-full shadow-[inset_-2px_-2px_4px_black,inset_2px_2px_4px_white] rounded-2xl p-3 flex gap-3 sm:mt-5  flex-wrap justify-evenly">
               <Datas
                 icon={<TbWorldLongitude />}
                 label={"Longitude"}
@@ -211,7 +211,7 @@ const App = () => {
               data={fullData}
             />
 
-            <div className="mt-5 text-black w-full bg-white/70 p-3 rounded backdrop-blur-2xl flex flex-col gap-2 sm:mb-10">
+            <div className="mt-5 shadow-[inset_-2px_-2px_4px_black,inset_2px_2px_4px_white] text-black w-full bg-white/70 p-3 rounded backdrop-blur-2xl flex flex-col gap-2 sm:mb-10">
               <label className="flex gap-1 items-center">
                 <FaWind /> Wind
               </label>

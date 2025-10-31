@@ -47,7 +47,7 @@ const Sun = ({ rise, set, time, data }) => {
   }, [data]);
 
   return (
-    <div className=" py-2 mt-4 backdrop-blur-xl text-black bg-white/60 rounded">
+    <div className=" py-2 mt-4 backdrop-blur-xl shadow-[inset_-2px_-2px_4px_black,inset_2px_2px_4px_white] text-black bg-white/60 rounded">
       <label className="flex items-center gap-1 ml-2 mt-2">
         <IoSunny /> Sun
       </label>
